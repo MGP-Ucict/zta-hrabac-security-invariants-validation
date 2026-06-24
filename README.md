@@ -43,6 +43,6 @@ The models terminate successfully with **Exit Code: 0 (0 errors detected)** unde
 *   **Result:** 1 distinct initial state, evaluated in ~8 seconds.
 
 ### 4. Invariant 4: Bounded Trust Autonomy
-*   **Property:** Proves that sessions are bounded to verification or limited modes under AI failures
+*   **Property:** Proves that sessions are bounded to active, verification or limited modes under AI failures
 *   **Result:** 1 distinct initial state, evaluated in ~6 seconds.
 
