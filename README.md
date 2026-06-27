@@ -7,8 +7,6 @@ This directory contains the formal specifications and configuration files used t
 *   `ZTA_HRABAC_inv1`: `inv1.tla` & `inv1.cfg` — Formal verification of **Invariant 1 (Privilege Integrity)**.
 *   `ZTA_HRABAC_inv2`: `inv2.tla` & `inv2.cfg`  — Formal verification of **Invariant 2 (Signature Non-Repudiation)**.
 *   `ZTA_HRABAC_inv3`: `inv3.tla` & `inv3.cfg`  — Formal verification of **Invariant 3 (Audit Log Tamper-Resistance)**.
-*   `ZTA_HRABAC_inv1`: `inv4.tla` & `inv4.cfg` — Formal verification of **Invariant 4 (Bounded Trust Autonomy)**.
-
 ---
 
 ## How to Run the Verification Online
@@ -33,16 +31,15 @@ The models terminate successfully with **Exit Code: 0 (0 errors detected)** unde
 ### 1. Invariant 1: Privilege Integrity
 *   **Property:** Proves that off-chain database mutations cannot compromise on-chain access controls.
 *   **Result:** 16 distinct states generated.
+![Runned tests output](ZTA_HRABAC_inv1/inv1.png)
+
 
 ### 2. Invariant 2: Signature Non-Repudiation
 *   **Property:** Proves that a compromised central bank server ($K_{server}$) cannot forge a valid transaction without interactive multi-party computation from the user's isolated hardware ($K_{client}$).
 *   **Result:** 1 distinct initial state, evaluated in ~3 seconds.
+![Runned tests output](ZTA_HRABAC_inv2/inv2.png)
 
 ### 3. Invariant 3: Audit Log Tamper-Resistance
 *   **Property:** Proves that internal rogue administrative purges on off-chain systems cannot alter or destroy the chronological append-only blockchain ledger.
 *   **Result:** 1 distinct initial state, evaluated in ~8 seconds.
-
-### 4. Invariant 4: Bounded Trust Autonomy
-*   **Property:** Proves that sessions are bounded to active, verification or limited modes under AI failures
-*   **Result:** 1 distinct initial state, evaluated in ~6 seconds.
-
+![Runned tests output](ZTA_HRABAC_inv3/inv3.png)
